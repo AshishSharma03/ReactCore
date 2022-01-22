@@ -1,19 +1,3 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// react-router components
 import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
@@ -25,8 +9,8 @@ import MuiLink from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
+import CBox from "components/CustomBox";
+import CTypography from "components/CustomTypography";
 
 function BackgroundBlogCard({ image, title, description, action }) {
   const cardActionStyles = {
@@ -53,9 +37,9 @@ function BackgroundBlogCard({ image, title, description, action }) {
         backgroundSize: "cover",
       }}
     >
-      <MKBox p={3}>
-        <MKBox minHeight="20.625rem" my="auto" py={3}>
-          <MKTypography
+      <CBox p={3}>
+        <CBox minHeight="20.625rem" my="auto" py={3}>
+          <CTypography
             variant="h2"
             color="white"
             mb={1}
@@ -66,12 +50,12 @@ function BackgroundBlogCard({ image, title, description, action }) {
             })}
           >
             {title}
-          </MKTypography>
-          <MKTypography variant="body2" color="white" my={3}>
+          </CTypography>
+          <CTypography variant="body2" color="white" my={3}>
             {description}
-          </MKTypography>
+          </CTypography>
           {action.type === "internal" ? (
-            <MKTypography
+            <CTypography
               component={Link}
               to={action.route}
               variant="body2"
@@ -82,9 +66,9 @@ function BackgroundBlogCard({ image, title, description, action }) {
             >
               {action.label}
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
+            </CTypography>
           ) : (
-            <MKTypography
+            <CTypography
               component={MuiLink}
               href={action.route}
               target="_blank"
@@ -97,10 +81,10 @@ function BackgroundBlogCard({ image, title, description, action }) {
             >
               {action.label}
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
+            </CTypography>
           )}
-        </MKBox>
-      </MKBox>
+        </CBox>
+      </CBox>
     </Card>
   );
 }

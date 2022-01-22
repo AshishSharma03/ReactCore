@@ -4,9 +4,9 @@ import { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 // Custom styles for Button
-import ButtonRoot from "components/Button/ButtonRoot";
+import ButtonRoot from "components/CustomButton/ButtonRoot";
 
-const MKButton = forwardRef(
+const CButton = forwardRef(
   ({ color, variant, size, circular, iconOnly, children, ...rest }, ref) => (
     <ButtonRoot
       {...rest}
@@ -21,8 +21,8 @@ const MKButton = forwardRef(
   )
 );
 
-// Setting default values for the props of MKButton
-MKButton.defaultProps = {
+// Setting default values for the props of CButton
+CButton.defaultProps = {
   size: "medium",
   variant: "contained",
   color: "white",
@@ -30,8 +30,8 @@ MKButton.defaultProps = {
   iconOnly: false,
 };
 
-// Typechecking props for the MKButton
-MKButton.propTypes = {
+// Typechecking props for the CButton
+CButton.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["text", "contained", "outlined", "gradient"]),
   color: PropTypes.oneOf([
@@ -51,4 +51,4 @@ MKButton.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default MKButton;
+export default CButton;

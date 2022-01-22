@@ -1,12 +1,9 @@
 import { forwardRef } from "react";
-
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
+// Custom styles for Box
+import BoxRoot from "components/CustomBox/BoxRoot";
 
-// Custom styles for MKBox
-import BoxRoot from "components/Box/BoxRoot";
-
-const MKBox = forwardRef(
+const CBox = forwardRef(
   (
     {
       variant,
@@ -36,8 +33,8 @@ const MKBox = forwardRef(
   )
 );
 
-// Setting default values for the props of MKBox
-MKBox.defaultProps = {
+// Setting default values for the props of CBox
+CBox.defaultProps = {
   variant: "contained",
   bgColor: "transparent",
   color: "dark",
@@ -47,8 +44,8 @@ MKBox.defaultProps = {
   coloredShadow: "none",
 };
 
-// Typechecking props for the MKBox
-MKBox.propTypes = {
+// Typechecking props for the CBox
+CBox.propTypes = {
   variant: PropTypes.oneOf(["contained", "gradient"]),
   bgColor: PropTypes.string,
   color: PropTypes.string,
@@ -68,4 +65,4 @@ MKBox.propTypes = {
   ]),
 };
 
-export default MKBox;
+export default CBox;

@@ -1,33 +1,12 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-/**
- * The base box-shadow styles for the Material Kit 2 React.
- * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Material Kit 2 React using thie file.
- */
-
-// Material Kit 2 React Base Styles
+// Custom Material React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Material Kit 2 React Helper Functions
+// Custom Material React Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { black, white, tabs, coloredShadows } = colors;
 
-export default {
+const boxShadows ={
   xs: boxShadow([0, 2], [9, -5], black.main, 0.15),
   sm: boxShadow([0, 5], [10, 0], black.main, 0.12),
   md: `${boxShadow([0, 4], [6, -1], black.main, 0.1)}, ${boxShadow(
@@ -114,3 +93,6 @@ export default {
     indicator: boxShadow([0, 1], [5, 1], tabs.indicator.boxShadow, 1),
   },
 };
+
+
+export default boxShadows;

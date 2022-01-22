@@ -3,10 +3,10 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Custom styles for MKTypography
-import TypographyRoot from "components/Typography/TypographyRoot";
+// Custom styles for CTypography
+import TypographyRoot from "components/CustomTypography/TypographyRoot";
 
-const MKTypography = forwardRef(
+const CTypography = forwardRef(
   (
     {
       color,
@@ -37,8 +37,8 @@ const MKTypography = forwardRef(
   )
 );
 
-// Setting default values for the props of MKTypography
-MKTypography.defaultProps = {
+// Setting default values for the props of CTypography
+CTypography.defaultProps = {
   color: "dark",
   fontWeight: false,
   textTransform: "none",
@@ -47,8 +47,8 @@ MKTypography.defaultProps = {
   opacity: 1,
 };
 
-// Typechecking props for the MKTypography
-MKTypography.propTypes = {
+// Typechecking props for the CTypography
+CTypography.propTypes = {
   color: PropTypes.oneOf([
     "inherit",
     "primary",
@@ -85,4 +85,4 @@ MKTypography.propTypes = {
   opacity: PropTypes.number,
 };
 
-export default MKTypography;
+export default CTypography;

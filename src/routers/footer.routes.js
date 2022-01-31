@@ -14,7 +14,7 @@ const date = new Date().getFullYear();
 
 const footerRouter ={
   brand: {
-    name: "Material Kit 2",
+    name: "Servitude Technology",
     image: logoCT,
     route: "/",
   },
@@ -74,7 +74,7 @@ const footerRouter ={
   ],
   copyright: (
     <CTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
+      All rights reserved. Copyright &copy; {date} Material UI by{" "}
       <CTypography
         component="a"
         href="https://www.creative-tim.com"
@@ -83,7 +83,7 @@ const footerRouter ={
         variant="button"
         fontWeight="regular"
       >
-        Creative Tim
+        Sevitude Technology
       </CTypography>
       .
     </CTypography>

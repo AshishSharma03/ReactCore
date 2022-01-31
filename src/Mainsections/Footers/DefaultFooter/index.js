@@ -9,20 +9,20 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 // Material Kit 2 React components
-import Box from "components/Box";
-import Typography from "components/Typography";
+import CBox from "components/CustomBox";
+import CTypography from "components/CustomTypography";
 
 function DefaultFooter({ content }) {
   const { brand, socials, menus, copyright } = content;
 
   return (
-    <Box component="footer">
+    <CBox component="footer" pt={5}>
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={3} sx={{ ml: "auto", mb: 3 }}>
-            <Box>
+            <CBox>
               <Link to={brand.route}>
-                <Box
+                <CBox
                   component="img"
                   src={brand.image}
                   alt={brand.name}
@@ -30,11 +30,11 @@ function DefaultFooter({ content }) {
                   mb={2}
                 />
               </Link>
-              <Typography variant="h6">{brand.name}</Typography>
-            </Box>
-            <Box display="flex" alignItems="center" mt={3}>
+              <CTypography variant="h6">{brand.name}</CTypography>
+            </CBox>
+            <CBox display="flex" alignItems="center" mt={3}>
               {socials.map(({ icon, link }, key) => (
-                <Typography
+                <CTypography
                   key={link}
                   component="a"
                   href={link}
@@ -46,13 +46,13 @@ function DefaultFooter({ content }) {
                   mr={key === socials.length - 1 ? 0 : 2.5}
                 >
                   {icon}
-                </Typography>
+                </CTypography>
               ))}
-            </Box>
+            </CBox>
           </Grid>
           {menus.map(({ name: title, items }) => (
             <Grid key={title} item xs={6} md={2} sx={{ mb: 3 }}>
-              <Typography
+              <CTypography
                 display="block"
                 variant="button"
                 fontWeight="bold"
@@ -60,12 +60,12 @@ function DefaultFooter({ content }) {
                 mb={1}
               >
                 {title}
-              </Typography>
-              <Box component="ul" p={0} m={0} sx={{ listStyle: "none" }}>
+              </CTypography>
+              <CBox component="ul" p={0} m={0} sx={{ listStyle: "none" }}>
                 {items.map(({ name, route, href }) => (
-                  <Box key={name} component="li" p={0} m={0} lineHeight={1.25}>
+                  <CBox key={name} component="li" p={0} m={0} lineHeight={1.25}>
                     {href ? (
-                      <Typography
+                      <CTypography
                         component="a"
                         href={href}
                         target="_blank"
@@ -75,9 +75,9 @@ function DefaultFooter({ content }) {
                         textTransform="capitalize"
                       >
                         {name}
-                      </Typography>
+                      </CTypography>
                     ) : (
-                      <Typography
+                      <CTypography
                         component={Link}
                         to={route}
                         variant="button"
@@ -85,11 +85,11 @@ function DefaultFooter({ content }) {
                         textTransform="capitalize"
                       >
                         {name}
-                      </Typography>
+                      </CTypography>
                     )}
-                  </Box>
+                  </CBox>
                 ))}
-              </Box>
+              </CBox>
             </Grid>
           ))}
           <Grid item xs={12} sx={{ textAlign: "center", my: 3 }}>
@@ -97,7 +97,7 @@ function DefaultFooter({ content }) {
           </Grid>
         </Grid>
       </Container>
-    </Box>
+    </CBox>
   );
 }
 

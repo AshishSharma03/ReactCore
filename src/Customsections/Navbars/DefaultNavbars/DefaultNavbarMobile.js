@@ -5,7 +5,7 @@ import Collapse from "@mui/material/Collapse";
 import MuiLink from "@mui/material/Link";
 import Box from "components/CustomBox";
 import Typography from "components/CustomTypography";
-import DefaultNavbarDropdown from "Mainsections/Navbars/DefaultNavbars/DefaultNavbarDropdown";
+import DefaultNavbarDropdown from "Customsections/Navbars/DefaultNavbars/DefaultNavbarDropdown";
 
 function DefaultNavbarMobile({ routes, open }) {
   const [collapse, setCollapse] = useState("");

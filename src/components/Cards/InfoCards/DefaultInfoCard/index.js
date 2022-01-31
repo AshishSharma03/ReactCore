@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Material Kit 2 React components
-import Box from "components/Box";
-import Typography from "components/Typography";
+import CBox from "components/CustomBox";
+import CTypography from "components/CustomTypography";
 
 function DefaultInfoCard({
   color,
@@ -17,13 +17,13 @@ function DefaultInfoCard({
   small,
 }) {
   return (
-    <Box
+    <CBox
       lineHeight={1}
       p={direction === "center" ? 2 : 0}
       textAlign={direction}
     >
       {typeof icon === "string" ? (
-        <Typography
+        <CTypography
           display="block"
           variant={direction === "center" ? "h2" : "h3"}
           color={color}
@@ -31,11 +31,11 @@ function DefaultInfoCard({
         >
           {" "}
           <Icon>{icon}</Icon>{" "}
-        </Typography>
+        </CTypography>
       ) : (
         icon
       )}
-      <Typography
+      <CTypography
         display="block"
         variant="5"
         fontWeight="bold"
@@ -43,8 +43,8 @@ function DefaultInfoCard({
         mb={1.5}
       >
         {title}
-      </Typography>
-      <Typography
+      </CTypography>
+      <CTypography
         display="block"
         variant={small ? "button" : "body2"}
         color="text"
@@ -52,8 +52,8 @@ function DefaultInfoCard({
         pl={direction === "right" ? 6 : 0}
       >
         {description}
-      </Typography>
-    </Box>
+      </CTypography>
+    </CBox>
   );
 }
 

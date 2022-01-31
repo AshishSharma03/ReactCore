@@ -18,11 +18,11 @@ import MuiLink from "@mui/material/Link";
 // Custom Material React components
 import CBox from "components/CustomBox";
 import Typography from "components/CustomTypography";
-import MKButton from "components/CustomButton";
+import CButton from "components/CustomButton";
 
 // Material Kit 2 React example components
-import DefaultNavbarDropdown from "Mainsections/Navbars/DefaultNavbars/DefaultNavbarDropdown";
-import DefaultNavbarMobile from "Mainsections/Navbars/DefaultNavbars/DefaultNavbarMobile";
+import DefaultNavbarDropdown from "Customsections/Navbars/DefaultNavbars/DefaultNavbarDropdown";
+import DefaultNavbarMobile from "Customsections/Navbars/DefaultNavbars/DefaultNavbarMobile";
 
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
@@ -472,8 +472,8 @@ function DefaultNavbar({
       <CBox
         py={1}
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
-        my={relative ? 0 : 0}
-        mx={relative ? 0 : 0}
+        my={relative ? 0 : 2}
+        mx={relative ? 0 : 3}
         width={relative ? "100%" : "calc(100% - 48px)"}
         borderRadius="xl"
         shadow={transparent ? "none" : "md"}
@@ -518,7 +518,7 @@ function DefaultNavbar({
           <CBox ml={{ xs: "auto", lg: 0 }}>
             {action &&
               (action.type === "internal" ? (
-                <MKButton
+                <CButton
                   component={Link}
                   to={action.route}
                   variant={
@@ -530,9 +530,9 @@ function DefaultNavbar({
                   size="small"
                 >
                   {action.label}
-                </MKButton>
+                </CButton>
               ) : (
-                <MKButton
+                <CButton
                   component="a"
                   href={action.route}
                   target="_blank"
@@ -546,7 +546,7 @@ function DefaultNavbar({
                   size="small"
                 >
                   {action.label}
-                </MKButton>
+                </CButton>
               ))}
           </CBox>
           <CBox
